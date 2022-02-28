@@ -28,6 +28,6 @@ MIT
 ---
 
 > [cedrickalegroso.com](https://www.cedrickalegroso.com) &nbsp;&middot;&nbsp;
-> GitHub [@cedrickalegroso](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
-> Twitter [@cedrickalegroso](https://twitter.com/amit_merchant)
+> GitHub [@cedrickalegroso](https://github.com/cedrickalegroso) &nbsp;&middot;&nbsp;
+> Twitter [@cedrickalegroso](https://twitter.com/cedrickalegroso)
 
