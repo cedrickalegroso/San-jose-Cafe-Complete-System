@@ -168,9 +168,14 @@ namespace SJC
         private DataSet DSMeds = new DataSet();
         private DataTable DTMEds = new DataTable();
 
+        // Meds
+        public static string selectedMedOVRID;
+        private DataSet DSOVRMeds = new DataSet();
+        private DataTable DTOVRMEds = new DataTable();
+
 
         // Add New Session Meds
-       // public static string selectedMedID;
+        // public static string selectedMedID;
         private DataSet DSAddMeds = new DataSet();
         private DataTable DTAddMEds = new DataTable();
 
@@ -179,6 +184,8 @@ namespace SJC
         // public static string selectedMedID;
         private DataSet DSViewMeds = new DataSet();
         private DataTable DTViewMeds = new DataTable();
+
+
 
         // ViewMeds
         public static int viewMedIDVal;
@@ -224,10 +231,25 @@ namespace SJC
         private static string SelectedAddnewMedID;
         private static string SelectedVewMedID;
 
+
         private static int addedMedInASessionCount;
         private static int addedViewMedInASessionCount;
 
 
+     
+
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "update Medication_Inventory set SJCMI_Session = '" + SelectedVewMedID + "',  SJCMI_Date = '" + DateTime.Now.ToShortDateString() + "',  SJCMI_Count = '" + addedViewMedInASessionCount + "' WHERE SJCMI_Session = '" + SelectedVewMedID + "' AND SJCMI_isArchive = 0 ";
+            executeQuery(txtQuery);
+            loadMedsOverall();
+            loadMeds();
+            dashboardTab.SelectedIndex = 7;
+            MessageBox.Show("New Inventory added", "Successfull");
+            addedViewMedInASessionCount = 0;
+
+        }
 
         private void button22_Click(object sender, EventArgs e)
         {
@@ -260,9 +282,11 @@ namespace SJC
             string txtQuery = "update Medication set SCJM_Name = '" + viewMedName.Text + "', SCJM_Brand = '" + viewMedBrand.Text + "', SCJM_Description = '" + viewMedDesc.Text + "', SJCM_Stock = '" + viewMedStock.Text + "', SJCM_DateExp = '" + viewMedEXPDATE.Value.ToShortDateString() + "'  WHERE SJCM_ItemID = '" + SelectedVewMedID + "' AND SJCM_isArchive = 0 ";
 
             executeQuery(txtQuery);
-            loadCurrentMedSession();
+            loadAddMedSession();
             GenerateItemMedID();
             resetAddnewMedTexts();
+
+            MessageBox.Show("Medication Updated Successfully", "Successfull");
         }
 
 
@@ -286,12 +310,14 @@ namespace SJC
             executeQuery(txtQuery);
             loadMeds();
             dashboardTab.SelectedIndex = 7;
+            addedMedInASessionCount = 0;
             MessageBox.Show("New Inventory added", "Successfull");
         }
 
         private void button20_Click(object sender, EventArgs e)
         {
             addMedicationToInventory();
+            loadMedsOverall();
         }
 
 
@@ -581,6 +607,25 @@ namespace SJC
             radioButton1.Checked = false;
             dashboardTab.SelectedIndex = 7;
             loadMeds();
+            loadMedsOverall();
+        }
+
+        private void loadMedsOverall()
+        {
+
+            setConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+
+            // Employee
+            string CommandText = "SELECT SCJM_Name, SCJM_Brand , SCJM_Description, SUM(SJCM_Stock) FROM Medication GROUP BY SCJM_Name; ";
+            sql_adptr = new SQLiteDataAdapter(CommandText, sql_con);
+            DSOVRMeds.Reset();
+            sql_adptr.Fill(DSOVRMeds);
+            DTOVRMEds = DSOVRMeds.Tables[0];
+            MedsInv.DataSource = DTOVRMEds;
+
+            sql_con.Close();
         }
 
 
@@ -2355,7 +2400,10 @@ namespace SJC
 
         private void getAuthData()
         {
-            string txtQuery = "SELECT * FROM Staff WHERE SJCS_ID = '" + 2 + "' ";
+
+           // MessageBox.Show(SJCAUTH.hostID.ToString(), "getAuthData");
+
+            string txtQuery = "SELECT * FROM Staff WHERE SJCS_ID = '" + SJCAUTH.hostID + "' ";
 
             setConnection();
             sql_con.Open();
@@ -2387,17 +2435,7 @@ namespace SJC
 
             }
 
-            else if (count > 1)
-
-            {
-                MessageBox.Show("There was an error fetching your account", "login page");
-            }
-
-            else
-
-            {
-                MessageBox.Show("There was an error fetching your account", "login page");
-            }
+        
             sql_con.Close();
         }
 
@@ -2880,5 +2918,7 @@ namespace SJC
         {
 
         }
+
+       
     }
 }

@@ -23,7 +23,7 @@ namespace SJC
         private SQLiteDataReader sql_dbr;
         public static string setdashname;
         public static int authaccess;
-        public static string hostID;
+        public static int hostID;
 
         private void setConnection()
         {
@@ -42,7 +42,7 @@ namespace SJC
             while (sql_dbr.Read())
             {
                 authaccess = sql_dbr.GetInt32(8);
-                hostID = sql_dbr.GetString(1);
+                hostID = sql_dbr.GetInt32(0);
                 count = count + 1;
 
             }
