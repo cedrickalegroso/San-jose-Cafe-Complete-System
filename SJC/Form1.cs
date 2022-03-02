@@ -30,6 +30,12 @@ namespace SJC
             sql_con = new SQLiteConnection("Data Source = SJCDB.db; Version = 3; New = False; Compress = True;");
         }
 
+
+        private void loadComboBox()
+        {
+
+        }
+
         private void Authenticate(string txtQuery)
         {
             setConnection();
