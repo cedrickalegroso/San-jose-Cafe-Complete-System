@@ -58,7 +58,6 @@ namespace SJC
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.dashbboardTopName = new System.Windows.Forms.Label();
             this.viewMedSessionDGV = new System.Windows.Forms.DataGridView();
             this.ss = new System.Windows.Forms.Panel();
@@ -70,12 +69,13 @@ namespace SJC
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewMedSessionDGV)).BeginInit();
             this.ss.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +85,7 @@ namespace SJC
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Rubik", 24F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Location = new System.Drawing.Point(16, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 40);
             this.label1.TabIndex = 12;
@@ -370,15 +370,6 @@ namespace SJC
             this.label13.TabIndex = 62;
             this.label13.Text = "POS SYSTEM";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::SJC.Properties.Resources.Icon_open_account_logout;
-            this.pictureBox7.Location = new System.Drawing.Point(1139, 24);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox7.TabIndex = 64;
-            this.pictureBox7.TabStop = false;
-            // 
             // dashbboardTopName
             // 
             this.dashbboardTopName.AutoSize = true;
@@ -529,6 +520,15 @@ namespace SJC
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::SJC.Properties.Resources.Icon_open_account_logout;
+            this.pictureBox7.Location = new System.Drawing.Point(1139, 24);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox7.TabIndex = 64;
+            this.pictureBox7.TabStop = false;
+            // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,12 +549,12 @@ namespace SJC
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewMedSessionDGV)).EndInit();
             this.ss.ResumeLayout(false);
             this.ss.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

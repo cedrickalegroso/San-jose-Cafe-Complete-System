@@ -20,3 +20,5 @@ C:\Users\perso\source\repos\SJC\SJC\obj\Debug\SJC.csproj.CopyComplete
 C:\Users\perso\source\repos\SJC\SJC\obj\Debug\SJC.FeatureMaster.resources
 C:\Users\perso\source\repos\SJC\SJC\obj\Debug\SJC.dashboard.resources
 C:\Users\perso\source\repos\SJC\SJC\obj\Debug\SJC.livequeue.resources
+C:\Users\perso\source\repos\SJC\SJC\obj\Debug\SJC.Assistant.resources
+C:\Users\perso\source\repos\SJC\SJC\obj\Debug\SJC.POS.resources

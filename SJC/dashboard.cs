@@ -235,8 +235,129 @@ namespace SJC
         private static int addedMedInASessionCount;
         private static int addedViewMedInASessionCount;
 
+        private static string edFNVAL;
+        private static string edLNVAL;
+        private static string edGenVAL;
+        private static string edAddVAL;
+        private static string edBdayVAL;
 
-     
+        private static string authUserPass;
+        private static string authUserVal;
+        
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "update Staff set SJCS_FirstName = '" + edFN.Text + "',  SJCS_LastName = '" + edLN.Text + "',  SJCS_BirthDay = '" + edBday.Value.ToShortDateString() + "',  SJCS_Address = '" + edAdd.Text + "',  SJCS_Gender = '" + edGen.Text + "' WHERE SJCS_ID = '" + authID + "' ";
+            executeQuery(txtQuery);
+            getDataandInfo();
+            dashboardTab.SelectedIndex = 11;
+            MessageBox.Show("Information updated", "Successfull");
+          
+        }
+
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            dashboardTab.SelectedIndex = 12;
+        }
+
+
+        private void getDataandInfo()
+        {
+            string txtQuery = "SELECT * FROM Staff WHERE SJCS_ID = '" + SJCAUTH.hostID + "' ";
+
+            setConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            sql_cmd.CommandText = txtQuery;
+            sql_cmd.ExecuteNonQuery();
+            sql_dbr = sql_cmd.ExecuteReader();
+            int count = 0;
+            while (sql_dbr.Read())
+            {
+
+                edFNVAL = sql_dbr.GetString(1);
+                edLNVAL = sql_dbr.GetString(2);
+                edBdayVAL = sql_dbr.GetString(3);
+                edAddVAL = sql_dbr.GetString(4);
+                edGenVAL = sql_dbr.GetString(5);
+
+
+                authUserPass = sql_dbr.GetString(6);
+
+                authUserVal = sql_dbr.GetString(7);
+
+                count = count + 1;
+
+            }
+
+
+            edFN.Text = edFNVAL;
+            edLN.Text = edLNVAL;
+            edBday.Text = edBdayVAL;
+            edAdd.Text = edAddVAL;
+            edGen.Text = edGenVAL;
+
+            sql_con.Close();
+
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+
+
+       
+
+            if (authPas.Text == authPasVer.Text )
+            {
+
+                if (authPasCur.Text == authUserVal)
+                {
+
+
+                    if (authUsern.Text == "Username")
+                    {
+                        string txtQuery = "update Staff set SJCS_AuthPass = '" + authPas.Text + "'  WHERE SJCS_ID = '" + authID + "' ";
+                        executeQuery(txtQuery);
+                        getDataandInfo();
+                        MessageBox.Show("Auth Credential updated", "Successfull");
+                    }
+                    else
+                    {
+                        string txtQuery = "update Staff set SJCS_AuthUser = '" + authUsern.Text + "', SJCS_AuthPass = '" + authPas.Text + "'  WHERE SJCS_ID = '" + authID + "' ";
+                        executeQuery(txtQuery);
+                        getDataandInfo();
+                        dashboardTab.SelectedIndex = 11;
+                        MessageBox.Show("Auth Credential updated", "Successfull");
+                    }
+
+
+
+                } else
+                {
+                    MessageBox.Show("Wrong Current Password", "Error");
+                }
+
+            
+
+            }
+            else
+            {
+                MessageBox.Show("Password Mismatch", "Error");
+            }
+
+
+           
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+
+            getDataandInfo();
+
+
+            dashboardTab.SelectedIndex = 11;
+        }
 
 
         private void button17_Click(object sender, EventArgs e)
@@ -2483,7 +2604,7 @@ namespace SJC
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            dashboardTab.SelectedIndex = 5;
+            dashboardTab.SelectedIndex = 10;
         }
 
       
@@ -2919,6 +3040,6 @@ namespace SJC
 
         }
 
-       
+     
     }
 }
