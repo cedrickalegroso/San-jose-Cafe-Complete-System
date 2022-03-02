@@ -56,10 +56,27 @@ namespace SJC
                 //MessageBox.Show("GOODS LODS", "login page");
 
 
-                dashboard dash = new dashboard();
-                this.Hide();
-                dash.ShowDialog();
-                this.Close();
+                if (authaccess == 1)
+                {
+                    dashboard dash = new dashboard();
+                    this.Hide();
+                    dash.ShowDialog();
+                    this.Close();
+                } else if (authaccess == 2)
+                {
+                    POS dash = new POS();
+                    this.Hide();
+                    dash.ShowDialog();
+                    this.Close();
+                } else if (authaccess == 3)
+                {
+                    Assistant dash = new Assistant();
+                    this.Hide();
+                    dash.ShowDialog();
+                    this.Close();
+                }
+
+                
 
             }
 
