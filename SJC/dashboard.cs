@@ -192,6 +192,7 @@ namespace SJC
         public static string viewMedNameVal;
         public static string viewMedBrandVal;
         public static int viewMedStockVal;
+       
         public static string viewMedDescVal;
         public static int viewMedisArchiveVal;
 
@@ -230,6 +231,7 @@ namespace SJC
 
         private static string SelectedAddnewMedID;
         private static string SelectedVewMedID;
+        private static string SelectedVewMedSessionID;
 
 
         private static int addedMedInASessionCount;
@@ -362,7 +364,17 @@ namespace SJC
 
         private void button17_Click(object sender, EventArgs e)
         {
-            string txtQuery = "update Medication_Inventory set SJCMI_Session = '" + SelectedVewMedID + "',  SJCMI_Date = '" + DateTime.Now.ToShortDateString() + "',  SJCMI_Count = '" + addedViewMedInASessionCount + "' WHERE SJCMI_Session = '" + SelectedVewMedID + "' AND SJCMI_isArchive = 0 ";
+
+
+        
+            addedViewMedInASessionCount = 0;
+            addedViewMedInASessionCount = int.Parse(viewMedStock.Text);
+
+           
+
+         
+
+            string txtQuery = "update Medication_Inventory set SJCMI_Session = '" + SelectedVewMedSessionID + "',  SJCMI_Date = '" + DateTime.Now.ToShortDateString() + "',  SJCMI_Count = '" + addedViewMedInASessionCount + "' WHERE SJCMI_Session = '" + SelectedVewMedSessionID + "' AND SJCMI_isArchive = 0 ";
             executeQuery(txtQuery);
             loadMedsOverall();
             loadMeds();
@@ -414,27 +426,40 @@ namespace SJC
         private void viewMedSessionDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
-            SelectedVewMedID = viewMedSessionDGV.SelectedRows[0].Cells[6].Value.ToString();
+            SelectedVewMedID = viewMedSessionDGV.SelectedRows[0].Cells[7].Value.ToString();
+
+            SelectedVewMedSessionID = viewMedSessionDGV.SelectedRows[0].Cells[8].Value.ToString();
 
             viewMedName.Text = viewMedSessionDGV.SelectedRows[0].Cells[0].Value.ToString();
             viewMedBrand.Text = viewMedSessionDGV.SelectedRows[0].Cells[1].Value.ToString();
             viewMedStock.Text = viewMedSessionDGV.SelectedRows[0].Cells[2].Value.ToString();
-            viewMedDesc.Text = viewMedSessionDGV.SelectedRows[0].Cells[3].Value.ToString();
-            viewMedEXPDATE.Text = viewMedSessionDGV.SelectedRows[0].Cells[4].Value.ToString();
+            viewMedPrice.Text = viewMedSessionDGV.SelectedRows[0].Cells[3].Value.ToString();
+            viewMedDesc.Text = viewMedSessionDGV.SelectedRows[0].Cells[4].Value.ToString();
+            viewMedEXPDATE.Text = viewMedSessionDGV.SelectedRows[0].Cells[5].Value.ToString();
         }
 
 
         private void addMedicationToInventory()
         {
-            string txtQuery = "INSERT into Medication_Inventory (SJCMI_Session, SJCMI_Date, SJCMI_Count) values ('" + GeneratedSessionMedID + "', '" + DateTime.Now.ToShortDateString() + "', '" + addedMedInASessionCount + "')";
+            string txtQuery = "INSERT into Medication_Inventory (SJCMI_Session, SJCMI_Date, SJCMI_Count, SJCMI_isArchive) values ('" + GeneratedSessionMedID + "', '" + DateTime.Now.ToShortDateString() + "', '" + addedMedInASessionCount + "', '" + 0 + "')";
 
             executeQuery(txtQuery);
             loadMeds();
             dashboardTab.SelectedIndex = 7;
             addedMedInASessionCount = 0;
             MessageBox.Show("New Inventory added", "Successfull");
+            unarchiveMedsAdded(GeneratedSessionMedID);
         }
 
+
+
+        private void unarchiveMedsAdded(string s)
+        {
+            string txtQuery = "update Medication set SJCM_isArchive = '" + 0 + "' WHERE SJCM_SessionID = '" + s + "'";
+
+            executeQuery(txtQuery);
+     
+        }
         private void button20_Click(object sender, EventArgs e)
         {
             addMedicationToInventory();
@@ -467,7 +492,7 @@ namespace SJC
                 addedMedInASessionCount = addedMedInASessionCount - int.Parse(addNewMedStock.Text);
 
 
-                string txtQuery = "update Medication set SJCM_isArchive = 1 WHERE SJCM_ItemID = '" + SelectedAddnewMedID + "' AND SJCM_isArchive = 0 ";
+                string txtQuery = "update Medication set SJCM_isArchive = 1 WHERE SJCM_ItemID = '" + SelectedAddnewMedID + "' AND SJCM_isArchive = 3 ";
                 executeQuery(txtQuery);
                 loadCurrentMedSession();
                 GenerateItemMedID();
@@ -491,7 +516,8 @@ namespace SJC
 
         private void button15_Click(object sender, EventArgs e)
         {
-            string txtQuery = "INSERT into Medication (SCJM_Name, SCJM_Brand, SCJM_Description, SCJM_DateAdded, SJCM_Stock, SJCM_DateExp, SJCM_ItemID, SJCM_SessionID, SJCM_isArchive) values ('" + addNewMedName.Text + "', '" + addNewMedBrand.Text + "', '" + addNewMedDesc.Text + "', '" + DateTime.Now.ToShortDateString() + "', '" + addNewMedStock.Text + "', '" + addNewMedEXP.Value.ToShortDateString() + "', '" + GeneratedItemMedID + "', '" + GeneratedSessionMedID + "', '" + 0 + "')";
+            //addNewMedPrice
+            string txtQuery = "INSERT into Medication (SCJM_Name, SCJM_Brand, SCJM_Description, SCJM_DateAdded, SJCM_Stock, SJCM_DateExp, SJCM_ItemID, SJCM_SessionID, SJCM_isArchive, SCJM_Price) values ('" + addNewMedName.Text + "', '" + addNewMedBrand.Text + "', '" + addNewMedDesc.Text + "', '" + DateTime.Now.ToShortDateString() + "', '" + addNewMedStock.Text + "', '" + addNewMedEXP.Value.ToShortDateString() + "', '" + GeneratedItemMedID + "', '" + GeneratedSessionMedID + "', '" + 1 + "', '" + addNewMedPrice.Text + "')";
             addedMedInASessionCount = addedMedInASessionCount + int.Parse(addNewMedStock.Text);
             executeQuery(txtQuery);
             loadCurrentMedSession();
@@ -529,7 +555,7 @@ namespace SJC
             sql_cmd = sql_con.CreateCommand();
 
             // Employee
-            string CommandText = "SELECT SCJM_Name AS NAME, SCJM_Brand AS BRAND, SJCM_Stock AS STOCK,  SCJM_Description AS DESCRIPTION,  SJCM_DateExp AS DATEEXPIRE, SCJM_DateAdded DATEADDED, SJCM_ItemID AS ITEM, SJCM_SessionID AS SESSION  FROM Medication WHERE SJCM_SessionID = '" + GeneratedSessionMedID + "' AND  SJCM_isArchive = 0 ";
+            string CommandText = "SELECT SCJM_Name AS NAME, SCJM_Brand AS BRAND, SJCM_Stock AS STOCK, SCJM_Price AS Price,  SCJM_Description AS DESCRIPTION,  SJCM_DateExp AS DATEEXPIRE, SCJM_DateAdded DATEADDED, SJCM_ItemID AS ITEM, SJCM_SessionID AS SESSION  FROM Medication WHERE SJCM_SessionID = '" + GeneratedSessionMedID + "'  ";
             sql_adptr = new SQLiteDataAdapter(CommandText, sql_con);
             DSAddMeds.Reset();
             sql_adptr.Fill(DSAddMeds);
@@ -667,7 +693,7 @@ namespace SJC
             sql_cmd = sql_con.CreateCommand();
 
           
-            string CommandText = "SELECT SCJM_Name AS NAME, SCJM_Brand AS BRAND, SJCM_Stock AS STOCK,  SCJM_Description AS DESCRIPTION,  SJCM_DateExp AS DATEEXPIRE, SCJM_DateAdded DATEADDED, SJCM_ItemID AS ITEM, SJCM_SessionID AS SESSION  FROM Medication WHERE SJCM_SessionID = '" + selectedMedID + "' AND  SJCM_isArchive = 0 ";
+            string CommandText = "SELECT SCJM_Name AS NAME, SCJM_Brand AS BRAND, SJCM_Stock AS STOCK, SCJM_Price AS PRICE,  SCJM_Description AS DESCRIPTION,  SJCM_DateExp AS DATEEXPIRE, SCJM_DateAdded DATEADDED, SJCM_ItemID AS ITEM, SJCM_SessionID AS SESSION  FROM Medication WHERE SJCM_SessionID = '" + selectedMedID + "' AND  SJCM_isArchive = 0 ";
 
             //string CommandText = "SELECT * FROM Medication WHERE SJCM_SessionID = '" + selectedMedID  + "' AND SJCM_isArchive = 0";
             sql_adptr = new SQLiteDataAdapter(CommandText, sql_con);
@@ -710,7 +736,7 @@ namespace SJC
             sql_cmd = sql_con.CreateCommand();
 
             // Employee
-            string CommandText = "SELECT * FROM Medication_Inventory";
+            string CommandText = "SELECT SJCMI_Session AS SESSION, SJCMI_Date AS DATE  FROM Medication_Inventory";
             sql_adptr = new SQLiteDataAdapter(CommandText, sql_con);
             DSMeds.Reset();
             sql_adptr.Fill(DSMeds);
@@ -739,7 +765,7 @@ namespace SJC
             sql_cmd = sql_con.CreateCommand();
 
             // Employee
-            string CommandText = "SELECT SCJM_Name, SCJM_Brand , SCJM_Description, SUM(SJCM_Stock) FROM Medication GROUP BY SCJM_Name; ";
+            string CommandText = "SELECT SCJM_Name, SCJM_Brand , SCJM_Description, SUM(SJCM_Stock) FROM Medication WHERE SJCM_isArchive = 0 GROUP BY SCJM_Name; ";
             sql_adptr = new SQLiteDataAdapter(CommandText, sql_con);
             DSOVRMeds.Reset();
             sql_adptr.Fill(DSOVRMeds);
@@ -2697,7 +2723,7 @@ namespace SJC
         {
             // string txtQuery = "SELECT * FROM Appointments WHERE isActive = 1 AND  SJCA_Staff = '" + authID + "' AND  SJCA_Schedule = '" + DateTime.Now.ToShortDateString() + "' ";
 
-            string txtQuery = "Select a.SJCA_ID, a.SJCA_StaffPatientID, a.SJCA_Schedule,  sp.SJCSPR_Staff from Appointments AS a INNER JOIN Staff_Patient AS sp ON sp.SJCSPR_Staff = '" + authID + "' AND a.SJCA_StaffPatientID = sp.SJCSPR_ID AND a.SJCA_Schedule = '" + DateTime.Now.ToShortDateString() + "';";
+            string txtQuery = "Select a.SJCA_ID, a.SJCA_StaffPatientID, a.SJCA_Schedule,  sp.SJCSPR_Staff from Appointments AS a INNER JOIN Staff_Patient AS sp ON sp.SJCSPR_Staff = '" + authID + "' AND a.SJCA_StaffPatientID = sp.SJCSPR_ID AND a.SJCA_Schedule = '" + DateTime.Now.ToShortDateString() + "' AND a.isActive = 1;";
 
             
 
@@ -2945,12 +2971,30 @@ namespace SJC
             }
         }
 
+        private void addNewMedPrice_Leave(object sender, EventArgs e)
+        {
+            if (addNewMedPrice.Text == "")
+            {
+                addNewMedPrice.Text = "Price";
+            }
+        }
+
+        private void addNewMedPrice_Enter(object sender, EventArgs e)
+        {
+            if (addNewMedPrice.Text == "Price")
+            {
+                addNewMedPrice.Text = "";
+            }
+           
+        }
+
         private void resetAddnewMedTexts()
         {
             addNewMedName.Text = "Med Name";
             addNewMedBrand.Text = "Med Brand";
             addNewMedStock.Text = "Stock";
             addNewMedDesc.Text = "Med Descriptions";
+            addNewMedPrice.Text = "Price";
         }
 
         private void resetViewnewMedTexts()
@@ -2958,6 +3002,7 @@ namespace SJC
             viewMedName.Text = "Med Name";
             viewMedBrand.Text = "Med Brand";
             viewMedStock.Text = "Stock";
+            viewMedPrice.Text = "Price";
             viewMedDesc.Text = "Med Descriptions";
         }
 
@@ -3029,6 +3074,25 @@ namespace SJC
                 viewMedDesc.Text = "Med Descriptions";
             }
         }
+
+
+
+        private void viewMedPrice_Enter(object sender, EventArgs e)
+        {
+            if (viewMedPrice.Text == "Price")
+            {
+                viewMedPrice.Text = "";
+            }
+        }
+
+        private void viewMedPrice_Leave(object sender, EventArgs e)
+        {
+            if (viewMedPrice.Text == "")
+            {
+                viewMedPrice.Text = "Price";
+            }
+        }
+
 
         private void button16_Click(object sender, EventArgs e)
         {
