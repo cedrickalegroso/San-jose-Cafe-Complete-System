@@ -190,6 +190,48 @@
   <ItemGroup>
     <None Include="Resources\Icon open-account-logout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon ionic-ios-medical2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon ionic-ios-medical3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon awesome-boxes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon awesome-diagnoses2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon awesome-home2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon ionic-ios-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon awesome-boxes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon awesome-diagnoses3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon awesome-home3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon ionic-ios-settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon awesome-boxes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon awesome-diagnoses4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon awesome-home4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon ionic-ios-settings2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

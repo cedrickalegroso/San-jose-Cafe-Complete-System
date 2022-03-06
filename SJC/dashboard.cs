@@ -1469,7 +1469,7 @@ namespace SJC
 
         private void initGetPatient()
         {
-            string txtQuery = "Select a.SJCA_ID, a.SJCA_StaffPatientID, a.SJCA_Schedule, a.isActive,  sp.SJCSPR_Staff, sp.SJCSPR_Patient from Appointments AS a INNER JOIN Staff_Patient AS sp ON sp.SJCSPR_Staff = '" + authID +"' AND a.SJCA_StaffPatientID = sp.SJCSPR_ID AND a.isActive = '" + 1 + "' ORDER BY a.SJCA_Time ASC LIMIT 3  ;";
+            string txtQuery = "Select a.SJCA_ID, a.SJCA_StaffPatientID, a.SJCA_Time, a.SJCA_Schedule, a.isActive,  sp.SJCSPR_Staff, sp.SJCSPR_Patient from Appointments AS a INNER JOIN Staff_Patient AS sp ON sp.SJCSPR_Staff = '" + authID +"' AND a.SJCA_StaffPatientID = sp.SJCSPR_ID AND a.isActive = '" + 1 + "' ORDER BY a.SJCA_Time ASC LIMIT 3  ;";
 
             setConnection();
             sql_con.Open();

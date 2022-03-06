@@ -83,6 +83,36 @@ namespace SJC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_boxes {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-boxes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_boxes1 {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-boxes1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_boxes2 {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-boxes2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_awesome_diagnoses {
             get {
                 object obj = ResourceManager.GetObject("Icon awesome-diagnoses", resourceCulture);
@@ -96,6 +126,36 @@ namespace SJC.Properties {
         internal static System.Drawing.Bitmap Icon_awesome_diagnoses1 {
             get {
                 object obj = ResourceManager.GetObject("Icon awesome-diagnoses1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_diagnoses2 {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-diagnoses2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_diagnoses3 {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-diagnoses3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_diagnoses4 {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-diagnoses4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +203,36 @@ namespace SJC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_home2 {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-home2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_home3 {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-home3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_home4 {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-home4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_feather_settings {
             get {
                 object obj = ResourceManager.GetObject("Icon feather-settings", resourceCulture);
@@ -176,6 +266,56 @@ namespace SJC.Properties {
         internal static System.Drawing.Bitmap Icon_ionic_ios_medical1 {
             get {
                 object obj = ResourceManager.GetObject("Icon ionic-ios-medical1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_ionic_ios_medical2 {
+            get {
+                object obj = ResourceManager.GetObject("Icon ionic-ios-medical2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_ionic_ios_medical3 {
+            get {
+                object obj = ResourceManager.GetObject("Icon ionic-ios-medical3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_ionic_ios_settings {
+            get {
+                object obj = ResourceManager.GetObject("Icon ionic-ios-settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_ionic_ios_settings1 {
+            get {
+                object obj = ResourceManager.GetObject("Icon ionic-ios-settings1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_ionic_ios_settings2 {
+            get {
+                object obj = ResourceManager.GetObject("Icon ionic-ios-settings2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
