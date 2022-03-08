@@ -232,6 +232,15 @@
   <ItemGroup>
     <None Include="Resources\Icon ionic-ios-settings2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mask Group 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon feather-minimize-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon ionic-md-close.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

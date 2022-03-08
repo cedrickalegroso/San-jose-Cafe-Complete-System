@@ -233,6 +233,16 @@ namespace SJC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_feather_minimize_2 {
+            get {
+                object obj = ResourceManager.GetObject("Icon feather-minimize-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_feather_settings {
             get {
                 object obj = ResourceManager.GetObject("Icon feather-settings", resourceCulture);
@@ -323,6 +333,16 @@ namespace SJC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_ionic_md_close {
+            get {
+                object obj = ResourceManager.GetObject("Icon ionic-md-close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_metro_lab {
             get {
                 object obj = ResourceManager.GetObject("Icon metro-lab", resourceCulture);
@@ -346,6 +366,16 @@ namespace SJC.Properties {
         internal static System.Drawing.Bitmap Icon_open_account_logout {
             get {
                 object obj = ResourceManager.GetObject("Icon open-account-logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mask_Group_1 {
+            get {
+                object obj = ResourceManager.GetObject("Mask Group 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
