@@ -55,7 +55,7 @@ namespace SJC
             this.button1.Enabled = false;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(550, 201);
+            this.button1.Location = new System.Drawing.Point(569, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(385, 449);
             this.button1.TabIndex = 0;
@@ -68,7 +68,7 @@ namespace SJC
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Rubik", 75F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
-            this.label1.Location = new System.Drawing.Point(623, 228);
+            this.label1.Location = new System.Drawing.Point(642, 228);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 126);
             this.label1.TabIndex = 1;
@@ -80,7 +80,7 @@ namespace SJC
             this.SJCAUTHTXTUSER.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SJCAUTHTXTUSER.Font = new System.Drawing.Font("Rubik", 14F);
             this.SJCAUTHTXTUSER.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
-            this.SJCAUTHTXTUSER.Location = new System.Drawing.Point(10, 10);
+            this.SJCAUTHTXTUSER.Location = new System.Drawing.Point(29, 10);
             this.SJCAUTHTXTUSER.Margin = new System.Windows.Forms.Padding(10);
             this.SJCAUTHTXTUSER.Name = "SJCAUTHTXTUSER";
             this.SJCAUTHTXTUSER.Size = new System.Drawing.Size(251, 23);
@@ -93,7 +93,7 @@ namespace SJC
             this.BTNAUTHLOGIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BTNAUTHLOGIN.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNAUTHLOGIN.ForeColor = System.Drawing.Color.White;
-            this.BTNAUTHLOGIN.Location = new System.Drawing.Point(606, 522);
+            this.BTNAUTHLOGIN.Location = new System.Drawing.Point(625, 522);
             this.BTNAUTHLOGIN.Name = "BTNAUTHLOGIN";
             this.BTNAUTHLOGIN.Size = new System.Drawing.Size(275, 43);
             this.BTNAUTHLOGIN.TabIndex = 4;
@@ -104,7 +104,7 @@ namespace SJC
             // panel1
             // 
             this.panel1.Controls.Add(this.SJCAUTHTXTUSER);
-            this.panel1.Location = new System.Drawing.Point(606, 384);
+            this.panel1.Location = new System.Drawing.Point(625, 384);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 42);
             this.panel1.TabIndex = 6;
@@ -112,7 +112,7 @@ namespace SJC
             // panel2
             // 
             this.panel2.Controls.Add(this.SJCAUTHTXTPASS);
-            this.panel2.Location = new System.Drawing.Point(606, 442);
+            this.panel2.Location = new System.Drawing.Point(625, 442);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(275, 42);
             this.panel2.TabIndex = 7;
@@ -124,7 +124,7 @@ namespace SJC
             this.SJCAUTHTXTPASS.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.SJCAUTHTXTPASS.Font = new System.Drawing.Font("Rubik", 14F);
             this.SJCAUTHTXTPASS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
-            this.SJCAUTHTXTPASS.Location = new System.Drawing.Point(11, 10);
+            this.SJCAUTHTXTPASS.Location = new System.Drawing.Point(30, 10);
             this.SJCAUTHTXTPASS.Margin = new System.Windows.Forms.Padding(10);
             this.SJCAUTHTXTPASS.Name = "SJCAUTHTXTPASS";
             this.SJCAUTHTXTPASS.PasswordChar = '*';
@@ -138,7 +138,7 @@ namespace SJC
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Rubik", 8F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
-            this.label2.Location = new System.Drawing.Point(688, 622);
+            this.label2.Location = new System.Drawing.Point(707, 622);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 13);
             this.label2.TabIndex = 8;
@@ -147,7 +147,7 @@ namespace SJC
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
-            this.button2.Location = new System.Drawing.Point(704, 685);
+            this.button2.Location = new System.Drawing.Point(727, 687);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 10;

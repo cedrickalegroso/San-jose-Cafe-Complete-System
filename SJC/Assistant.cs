@@ -434,6 +434,15 @@ namespace SJC
             sql_con.Close();
         }
 
-       
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Goodbye");
+            Application.Exit();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

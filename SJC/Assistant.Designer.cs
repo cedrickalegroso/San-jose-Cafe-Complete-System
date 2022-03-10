@@ -29,12 +29,10 @@ namespace SJC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dashbboardTopName = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -79,7 +77,6 @@ namespace SJC
             this.panel37 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel46 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -109,7 +106,13 @@ namespace SJC
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -124,7 +127,6 @@ namespace SJC
             this.panel39.SuspendLayout();
             this.panel38.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -133,41 +135,23 @@ namespace SJC
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Rubik", 24F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 40);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "SJC";
             // 
             // dashbboardTopName
             // 
             this.dashbboardTopName.AutoSize = true;
-            this.dashbboardTopName.Font = new System.Drawing.Font("Rubik", 14F);
-            this.dashbboardTopName.ForeColor = System.Drawing.Color.White;
-            this.dashbboardTopName.Location = new System.Drawing.Point(982, 25);
+            this.dashbboardTopName.BackColor = System.Drawing.Color.White;
+            this.dashbboardTopName.Font = new System.Drawing.Font("Rubik SemiBold", 15F, System.Drawing.FontStyle.Bold);
+            this.dashbboardTopName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.dashbboardTopName.Location = new System.Drawing.Point(109, 20);
             this.dashbboardTopName.Name = "dashbboardTopName";
-            this.dashbboardTopName.Size = new System.Drawing.Size(120, 24);
+            this.dashbboardTopName.Size = new System.Drawing.Size(137, 25);
             this.dashbboardTopName.TabIndex = 65;
             this.dashbboardTopName.Text = "Jake Peralta";
             this.dashbboardTopName.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::SJC.Properties.Resources.Icon_open_account_logout;
-            this.pictureBox7.Location = new System.Drawing.Point(1107, 29);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox7.TabIndex = 66;
-            this.pictureBox7.TabStop = false;
             // 
             // panel2
             // 
@@ -186,7 +170,7 @@ namespace SJC
             this.panel2.Controls.Add(this.label15);
             this.panel2.Location = new System.Drawing.Point(114, 65);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(973, 520);
+            this.panel2.Size = new System.Drawing.Size(1456, 839);
             this.panel2.TabIndex = 67;
             // 
             // tabControl1
@@ -196,15 +180,15 @@ namespace SJC
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(-14, -36);
+            this.tabControl1.Location = new System.Drawing.Point(-14, -23);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1002, 568);
+            this.tabControl1.Size = new System.Drawing.Size(1488, 866);
             this.tabControl1.TabIndex = 112;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.Time);
             this.tabPage1.Controls.Add(this.adt2);
@@ -218,15 +202,16 @@ namespace SJC
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(994, 542);
+            this.tabPage1.Size = new System.Drawing.Size(1480, 840);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(786, 56);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Location = new System.Drawing.Point(1201, 134);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 23);
+            this.button1.Size = new System.Drawing.Size(168, 40);
             this.button1.TabIndex = 123;
             this.button1.Text = "Add New Patient";
             this.button1.UseVisualStyleBackColor = true;
@@ -237,19 +222,20 @@ namespace SJC
             this.Time.AutoSize = true;
             this.Time.BackColor = System.Drawing.Color.Transparent;
             this.Time.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Time.Font = new System.Drawing.Font("Rubik", 8F);
-            this.Time.ForeColor = System.Drawing.Color.White;
-            this.Time.Location = new System.Drawing.Point(673, 104);
+            this.Time.Font = new System.Drawing.Font("Rubik", 12F);
+            this.Time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.Time.Location = new System.Drawing.Point(1057, 231);
             this.Time.Name = "Time";
-            this.Time.Size = new System.Drawing.Size(32, 13);
+            this.Time.Size = new System.Drawing.Size(45, 20);
             this.Time.TabIndex = 122;
             this.Time.Text = "Time";
             // 
             // adt2
             // 
-            this.adt2.Location = new System.Drawing.Point(676, 128);
+            this.adt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.adt2.Location = new System.Drawing.Point(1061, 254);
             this.adt2.Name = "adt2";
-            this.adt2.Size = new System.Drawing.Size(230, 20);
+            this.adt2.Size = new System.Drawing.Size(308, 26);
             this.adt2.TabIndex = 121;
             // 
             // label14
@@ -257,19 +243,20 @@ namespace SJC
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Font = new System.Drawing.Font("Rubik", 8F);
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(437, 104);
+            this.label14.Font = new System.Drawing.Font("Rubik", 12F);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label14.Location = new System.Drawing.Point(742, 231);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 13);
+            this.label14.Size = new System.Drawing.Size(44, 20);
             this.label14.TabIndex = 120;
             this.label14.Text = "Date";
             // 
             // adt
             // 
-            this.adt.Location = new System.Drawing.Point(440, 127);
+            this.adt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.adt.Location = new System.Drawing.Point(745, 254);
             this.adt.Name = "adt";
-            this.adt.Size = new System.Drawing.Size(230, 20);
+            this.adt.Size = new System.Drawing.Size(290, 26);
             this.adt.TabIndex = 119;
             // 
             // label16
@@ -277,19 +264,20 @@ namespace SJC
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Font = new System.Drawing.Font("Rubik", 8F);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(31, 104);
+            this.label16.Font = new System.Drawing.Font("Rubik", 12F);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label16.Location = new System.Drawing.Point(106, 229);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 13);
+            this.label16.Size = new System.Drawing.Size(150, 20);
             this.label16.TabIndex = 117;
             this.label16.Text = "Doctor and Patient";
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(786, 154);
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button17.Location = new System.Drawing.Point(1201, 297);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(120, 23);
+            this.button17.Size = new System.Drawing.Size(168, 35);
             this.button17.TabIndex = 115;
             this.button17.Text = "Add";
             this.button17.UseVisualStyleBackColor = true;
@@ -298,27 +286,28 @@ namespace SJC
             // dashboardGreetingName
             // 
             this.dashboardGreetingName.AutoSize = true;
-            this.dashboardGreetingName.Font = new System.Drawing.Font("Rubik", 24F);
-            this.dashboardGreetingName.ForeColor = System.Drawing.Color.White;
-            this.dashboardGreetingName.Location = new System.Drawing.Point(26, 42);
+            this.dashboardGreetingName.Font = new System.Drawing.Font("Rubik", 32F);
+            this.dashboardGreetingName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.dashboardGreetingName.Location = new System.Drawing.Point(101, 119);
             this.dashboardGreetingName.Name = "dashboardGreetingName";
-            this.dashboardGreetingName.Size = new System.Drawing.Size(319, 40);
+            this.dashboardGreetingName.Size = new System.Drawing.Size(431, 54);
             this.dashboardGreetingName.TabIndex = 114;
             this.dashboardGreetingName.Text = "Create Appointment";
             // 
             // patientcbx
             // 
-            this.patientcbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
-            this.patientcbx.ForeColor = System.Drawing.Color.White;
+            this.patientcbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.patientcbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.patientcbx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.patientcbx.FormattingEnabled = true;
-            this.patientcbx.Location = new System.Drawing.Point(33, 127);
+            this.patientcbx.Location = new System.Drawing.Point(110, 252);
             this.patientcbx.Name = "patientcbx";
-            this.patientcbx.Size = new System.Drawing.Size(386, 21);
+            this.patientcbx.Size = new System.Drawing.Size(591, 28);
             this.patientcbx.TabIndex = 112;
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
             this.tabPage2.Controls.Add(this.button24);
             this.tabPage2.Controls.Add(this.button23);
             this.tabPage2.Controls.Add(this.panel35);
@@ -326,15 +315,16 @@ namespace SJC
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(980, 494);
+            this.tabPage2.Size = new System.Drawing.Size(1480, 817);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(13, 155);
+            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button24.Location = new System.Drawing.Point(30, 172);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(120, 23);
+            this.button24.Size = new System.Drawing.Size(190, 28);
             this.button24.TabIndex = 105;
             this.button24.Text = "Your Logs";
             this.button24.UseVisualStyleBackColor = true;
@@ -342,9 +332,10 @@ namespace SJC
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(13, 110);
+            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button23.Location = new System.Drawing.Point(30, 127);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(120, 23);
+            this.button23.Size = new System.Drawing.Size(190, 27);
             this.button23.TabIndex = 104;
             this.button23.Text = "Edit Account Profile";
             this.button23.UseVisualStyleBackColor = true;
@@ -352,26 +343,27 @@ namespace SJC
             // 
             // panel35
             // 
-            this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
-            this.panel35.Location = new System.Drawing.Point(13, 76);
+            this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.panel35.Location = new System.Drawing.Point(25, 89);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(936, 10);
+            this.panel35.Size = new System.Drawing.Size(1400, 10);
             this.panel35.TabIndex = 103;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Rubik", 24F);
-            this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(6, 32);
+            this.label28.Font = new System.Drawing.Font("Rubik SemiBold", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label28.Location = new System.Drawing.Point(16, 32);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(143, 40);
+            this.label28.Size = new System.Drawing.Size(204, 54);
             this.label28.TabIndex = 102;
             this.label28.Text = "Settings";
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.label34);
             this.tabPage3.Controls.Add(this.label33);
             this.tabPage3.Controls.Add(this.label32);
@@ -392,95 +384,96 @@ namespace SJC
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(980, 494);
+            this.tabPage3.Size = new System.Drawing.Size(1480, 817);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Rubik", 8F);
-            this.label34.ForeColor = System.Drawing.Color.White;
-            this.label34.Location = new System.Drawing.Point(20, 372);
+            this.label34.Font = new System.Drawing.Font("Rubik", 12F);
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label34.Location = new System.Drawing.Point(33, 446);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(78, 13);
+            this.label34.Size = new System.Drawing.Size(111, 20);
             this.label34.TabIndex = 122;
             this.label34.Text = "Old Password";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Rubik", 8F);
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(517, 318);
+            this.label33.Font = new System.Drawing.Font("Rubik", 12F);
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label33.Location = new System.Drawing.Point(582, 370);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(116, 13);
+            this.label33.Size = new System.Drawing.Size(166, 20);
             this.label33.TabIndex = 121;
             this.label33.Text = "New Password Verify";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Rubik", 8F);
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(267, 318);
+            this.label32.Font = new System.Drawing.Font("Rubik", 12F);
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label32.Location = new System.Drawing.Point(278, 370);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(84, 13);
+            this.label32.Size = new System.Drawing.Size(119, 20);
             this.label32.TabIndex = 120;
             this.label32.Text = "New Password";
             // 
             // panel45
             // 
-            this.panel45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel45.BackColor = System.Drawing.Color.White;
             this.panel45.Controls.Add(this.authPasCur);
-            this.panel45.Location = new System.Drawing.Point(22, 387);
+            this.panel45.Location = new System.Drawing.Point(37, 476);
             this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(234, 32);
+            this.panel45.Size = new System.Drawing.Size(234, 40);
             this.panel45.TabIndex = 117;
             // 
             // authPasCur
             // 
-            this.authPasCur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.authPasCur.BackColor = System.Drawing.Color.White;
             this.authPasCur.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.authPasCur.Font = new System.Drawing.Font("Rubik", 8F);
-            this.authPasCur.ForeColor = System.Drawing.Color.White;
+            this.authPasCur.Font = new System.Drawing.Font("Rubik", 12F);
+            this.authPasCur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.authPasCur.Location = new System.Drawing.Point(10, 10);
             this.authPasCur.Margin = new System.Windows.Forms.Padding(10);
             this.authPasCur.Name = "authPasCur";
             this.authPasCur.PasswordChar = '*';
-            this.authPasCur.Size = new System.Drawing.Size(214, 13);
+            this.authPasCur.Size = new System.Drawing.Size(214, 19);
             this.authPasCur.TabIndex = 2;
             this.authPasCur.Text = "Current Password";
             // 
             // panel44
             // 
-            this.panel44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel44.BackColor = System.Drawing.Color.White;
             this.panel44.Controls.Add(this.authPasVer);
-            this.panel44.Location = new System.Drawing.Point(520, 334);
+            this.panel44.Location = new System.Drawing.Point(586, 393);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(234, 32);
+            this.panel44.Size = new System.Drawing.Size(237, 40);
             this.panel44.TabIndex = 113;
             // 
             // authPasVer
             // 
-            this.authPasVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.authPasVer.BackColor = System.Drawing.Color.White;
             this.authPasVer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.authPasVer.Font = new System.Drawing.Font("Rubik", 8F);
-            this.authPasVer.ForeColor = System.Drawing.Color.White;
+            this.authPasVer.Font = new System.Drawing.Font("Rubik", 12F);
+            this.authPasVer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.authPasVer.Location = new System.Drawing.Point(10, 10);
             this.authPasVer.Margin = new System.Windows.Forms.Padding(10);
             this.authPasVer.Name = "authPasVer";
             this.authPasVer.PasswordChar = '*';
-            this.authPasVer.Size = new System.Drawing.Size(214, 13);
+            this.authPasVer.Size = new System.Drawing.Size(214, 19);
             this.authPasVer.TabIndex = 2;
             this.authPasVer.Text = "Verify Password";
             // 
             // button26
             // 
+            this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button26.Location = new System.Drawing.Point(679, 397);
+            this.button26.Location = new System.Drawing.Point(748, 525);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(75, 21);
+            this.button26.Size = new System.Drawing.Size(75, 33);
             this.button26.TabIndex = 119;
             this.button26.Text = "Update Account";
             this.button26.UseVisualStyleBackColor = true;
@@ -489,43 +482,44 @@ namespace SJC
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Rubik", 14F);
-            this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(28, 274);
+            this.label30.Font = new System.Drawing.Font("Rubik SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label30.Location = new System.Drawing.Point(29, 332);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(160, 24);
+            this.label30.Size = new System.Drawing.Size(185, 26);
             this.label30.TabIndex = 118;
             this.label30.Text = "Auth Credentials";
             // 
             // panel42
             // 
-            this.panel42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel42.BackColor = System.Drawing.Color.White;
             this.panel42.Controls.Add(this.authPas);
-            this.panel42.Location = new System.Drawing.Point(270, 334);
+            this.panel42.Location = new System.Drawing.Point(282, 393);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(234, 32);
+            this.panel42.Size = new System.Drawing.Size(281, 40);
             this.panel42.TabIndex = 112;
             // 
             // authPas
             // 
-            this.authPas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.authPas.BackColor = System.Drawing.Color.White;
             this.authPas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.authPas.Font = new System.Drawing.Font("Rubik", 8F);
-            this.authPas.ForeColor = System.Drawing.Color.White;
+            this.authPas.Font = new System.Drawing.Font("Rubik", 12F);
+            this.authPas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.authPas.Location = new System.Drawing.Point(10, 10);
             this.authPas.Margin = new System.Windows.Forms.Padding(10);
             this.authPas.Name = "authPas";
             this.authPas.PasswordChar = '*';
-            this.authPas.Size = new System.Drawing.Size(214, 13);
+            this.authPas.Size = new System.Drawing.Size(261, 19);
             this.authPas.TabIndex = 2;
             this.authPas.Text = "Password";
             // 
             // button25
             // 
+            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button25.Location = new System.Drawing.Point(679, 213);
+            this.button25.Location = new System.Drawing.Point(748, 310);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(75, 21);
+            this.button25.Size = new System.Drawing.Size(75, 29);
             this.button25.TabIndex = 116;
             this.button25.Text = "Update Account";
             this.button25.UseVisualStyleBackColor = true;
@@ -533,134 +527,135 @@ namespace SJC
             // 
             // authUser
             // 
-            this.authUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.authUser.BackColor = System.Drawing.Color.White;
             this.authUser.Controls.Add(this.authUsern);
-            this.authUser.Location = new System.Drawing.Point(25, 334);
+            this.authUser.Location = new System.Drawing.Point(37, 393);
             this.authUser.Name = "authUser";
-            this.authUser.Size = new System.Drawing.Size(234, 32);
+            this.authUser.Size = new System.Drawing.Size(234, 40);
             this.authUser.TabIndex = 115;
             // 
             // authUsern
             // 
-            this.authUsern.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.authUsern.BackColor = System.Drawing.Color.White;
             this.authUsern.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.authUsern.Font = new System.Drawing.Font("Rubik", 8F);
-            this.authUsern.ForeColor = System.Drawing.Color.White;
+            this.authUsern.Font = new System.Drawing.Font("Rubik", 12F);
+            this.authUsern.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.authUsern.Location = new System.Drawing.Point(10, 10);
             this.authUsern.Margin = new System.Windows.Forms.Padding(10);
             this.authUsern.Name = "authUsern";
-            this.authUsern.Size = new System.Drawing.Size(214, 13);
+            this.authUsern.Size = new System.Drawing.Size(214, 19);
             this.authUsern.TabIndex = 2;
             this.authUsern.Text = "Username";
             // 
             // edBday
             // 
-            this.edBday.Location = new System.Drawing.Point(554, 167);
+            this.edBday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.edBday.Location = new System.Drawing.Point(550, 269);
             this.edBday.Name = "edBday";
-            this.edBday.Size = new System.Drawing.Size(200, 20);
+            this.edBday.Size = new System.Drawing.Size(273, 26);
             this.edBday.TabIndex = 114;
             // 
             // panel41
             // 
-            this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel41.BackColor = System.Drawing.Color.White;
             this.panel41.Controls.Add(this.edAdd);
-            this.panel41.Location = new System.Drawing.Point(32, 158);
+            this.panel41.Location = new System.Drawing.Point(34, 259);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(504, 32);
+            this.panel41.Size = new System.Drawing.Size(504, 39);
             this.panel41.TabIndex = 111;
             // 
             // edAdd
             // 
-            this.edAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.edAdd.BackColor = System.Drawing.Color.White;
             this.edAdd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.edAdd.Font = new System.Drawing.Font("Rubik", 8F);
-            this.edAdd.ForeColor = System.Drawing.Color.White;
+            this.edAdd.Font = new System.Drawing.Font("Rubik", 12F);
+            this.edAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.edAdd.Location = new System.Drawing.Point(10, 10);
             this.edAdd.Margin = new System.Windows.Forms.Padding(10);
             this.edAdd.Name = "edAdd";
-            this.edAdd.Size = new System.Drawing.Size(484, 13);
+            this.edAdd.Size = new System.Drawing.Size(484, 19);
             this.edAdd.TabIndex = 2;
             this.edAdd.Text = "Address";
             // 
             // panel40
             // 
-            this.panel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel40.BackColor = System.Drawing.Color.White;
             this.panel40.Controls.Add(this.edGen);
-            this.panel40.Location = new System.Drawing.Point(538, 110);
+            this.panel40.Location = new System.Drawing.Point(662, 211);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(216, 32);
+            this.panel40.Size = new System.Drawing.Size(161, 40);
             this.panel40.TabIndex = 107;
             // 
             // edGen
             // 
-            this.edGen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.edGen.BackColor = System.Drawing.Color.White;
             this.edGen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.edGen.Font = new System.Drawing.Font("Rubik", 8F);
-            this.edGen.ForeColor = System.Drawing.Color.White;
+            this.edGen.Font = new System.Drawing.Font("Rubik", 12F);
+            this.edGen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.edGen.Location = new System.Drawing.Point(10, 10);
             this.edGen.Margin = new System.Windows.Forms.Padding(10);
             this.edGen.Name = "edGen";
-            this.edGen.Size = new System.Drawing.Size(196, 13);
+            this.edGen.Size = new System.Drawing.Size(141, 19);
             this.edGen.TabIndex = 2;
             this.edGen.Text = "Gender";
             // 
             // panel39
             // 
-            this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel39.BackColor = System.Drawing.Color.White;
             this.panel39.Controls.Add(this.edLN);
-            this.panel39.Location = new System.Drawing.Point(287, 110);
+            this.panel39.Location = new System.Drawing.Point(384, 211);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(234, 32);
+            this.panel39.Size = new System.Drawing.Size(268, 40);
             this.panel39.TabIndex = 106;
             // 
             // edLN
             // 
-            this.edLN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.edLN.BackColor = System.Drawing.Color.White;
             this.edLN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.edLN.Font = new System.Drawing.Font("Rubik", 8F);
-            this.edLN.ForeColor = System.Drawing.Color.White;
+            this.edLN.Font = new System.Drawing.Font("Rubik", 12F);
+            this.edLN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.edLN.Location = new System.Drawing.Point(10, 10);
             this.edLN.Margin = new System.Windows.Forms.Padding(10);
             this.edLN.Name = "edLN";
-            this.edLN.Size = new System.Drawing.Size(214, 13);
+            this.edLN.Size = new System.Drawing.Size(239, 19);
             this.edLN.TabIndex = 2;
             this.edLN.Text = "Last Name";
             // 
             // panel38
             // 
-            this.panel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel38.BackColor = System.Drawing.Color.White;
             this.panel38.Controls.Add(this.edFN);
-            this.panel38.Location = new System.Drawing.Point(32, 110);
+            this.panel38.Location = new System.Drawing.Point(34, 211);
             this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(234, 32);
+            this.panel38.Size = new System.Drawing.Size(335, 40);
             this.panel38.TabIndex = 110;
             // 
             // edFN
             // 
-            this.edFN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.edFN.BackColor = System.Drawing.Color.White;
             this.edFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.edFN.Font = new System.Drawing.Font("Rubik", 8F);
-            this.edFN.ForeColor = System.Drawing.Color.White;
+            this.edFN.Font = new System.Drawing.Font("Rubik", 12F);
+            this.edFN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.edFN.Location = new System.Drawing.Point(10, 10);
             this.edFN.Margin = new System.Windows.Forms.Padding(10);
             this.edFN.Name = "edFN";
-            this.edFN.Size = new System.Drawing.Size(214, 13);
+            this.edFN.Size = new System.Drawing.Size(315, 19);
             this.edFN.TabIndex = 2;
             this.edFN.Text = "First Name";
             // 
             // panel37
             // 
-            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.panel37.Location = new System.Drawing.Point(32, 82);
             this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(722, 10);
+            this.panel37.Size = new System.Drawing.Size(789, 10);
             this.panel37.TabIndex = 109;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Rubik", 24F);
-            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.label29.Location = new System.Drawing.Point(25, 39);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(391, 40);
@@ -669,77 +664,41 @@ namespace SJC
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.tabPage4.Controls.Add(this.dataGridView2);
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.tabPage4.Controls.Add(this.dataGridView1);
             this.tabPage4.Controls.Add(this.panel46);
             this.tabPage4.Controls.Add(this.label31);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(980, 494);
+            this.tabPage4.Size = new System.Drawing.Size(1480, 817);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rubik", 8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rubik", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.GridColor = System.Drawing.Color.White;
-            this.dataGridView2.Location = new System.Drawing.Point(23, 72);
-            this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rubik", 8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.Size = new System.Drawing.Size(923, 405);
-            this.dataGridView2.TabIndex = 104;
-            // 
             // panel46
             // 
-            this.panel46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
-            this.panel46.Location = new System.Drawing.Point(23, 48);
+            this.panel46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.panel46.Location = new System.Drawing.Point(25, 80);
             this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(923, 10);
+            this.panel46.Size = new System.Drawing.Size(1415, 10);
             this.panel46.TabIndex = 103;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Rubik", 24F);
-            this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(16, 5);
+            this.label31.Font = new System.Drawing.Font("Rubik SemiBold", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label31.Location = new System.Drawing.Point(16, 23);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(222, 40);
+            this.label31.Size = new System.Drawing.Size(313, 54);
             this.label31.TabIndex = 102;
             this.label31.Text = "Account Logs";
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.tabPage5.Controls.Add(this.label4);
+            this.tabPage5.Controls.Add(this.comboBox1);
             this.tabPage5.Controls.Add(this.addNewPatientSubmit);
             this.tabPage5.Controls.Add(this.panel16);
             this.tabPage5.Controls.Add(this.panel15);
@@ -751,15 +710,16 @@ namespace SJC
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(980, 494);
+            this.tabPage5.Size = new System.Drawing.Size(1480, 840);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             // 
             // addNewPatientSubmit
             // 
-            this.addNewPatientSubmit.Location = new System.Drawing.Point(795, 350);
+            this.addNewPatientSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addNewPatientSubmit.Location = new System.Drawing.Point(656, 411);
             this.addNewPatientSubmit.Name = "addNewPatientSubmit";
-            this.addNewPatientSubmit.Size = new System.Drawing.Size(120, 23);
+            this.addNewPatientSubmit.Size = new System.Drawing.Size(160, 32);
             this.addNewPatientSubmit.TabIndex = 138;
             this.addNewPatientSubmit.Text = "Add Patient Data";
             this.addNewPatientSubmit.UseVisualStyleBackColor = true;
@@ -767,24 +727,24 @@ namespace SJC
             // 
             // panel16
             // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel16.BackColor = System.Drawing.Color.White;
             this.panel16.Controls.Add(this.addNewPatientDATA);
-            this.panel16.Location = new System.Drawing.Point(43, 228);
+            this.panel16.Location = new System.Drawing.Point(43, 238);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(722, 145);
+            this.panel16.Size = new System.Drawing.Size(773, 145);
             this.panel16.TabIndex = 137;
             // 
             // addNewPatientDATA
             // 
-            this.addNewPatientDATA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.addNewPatientDATA.BackColor = System.Drawing.Color.White;
             this.addNewPatientDATA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.addNewPatientDATA.Font = new System.Drawing.Font("Rubik", 8F);
-            this.addNewPatientDATA.ForeColor = System.Drawing.Color.White;
+            this.addNewPatientDATA.Font = new System.Drawing.Font("Rubik", 12F);
+            this.addNewPatientDATA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.addNewPatientDATA.Location = new System.Drawing.Point(10, 10);
             this.addNewPatientDATA.Margin = new System.Windows.Forms.Padding(10);
             this.addNewPatientDATA.Multiline = true;
             this.addNewPatientDATA.Name = "addNewPatientDATA";
-            this.addNewPatientDATA.Size = new System.Drawing.Size(702, 125);
+            this.addNewPatientDATA.Size = new System.Drawing.Size(751, 125);
             this.addNewPatientDATA.TabIndex = 2;
             this.addNewPatientDATA.Text = "Patient Data";
             this.addNewPatientDATA.Enter += new System.EventHandler(this.addNewPatientDATA_Enter);
@@ -792,23 +752,23 @@ namespace SJC
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel15.BackColor = System.Drawing.Color.White;
             this.panel15.Controls.Add(this.addNewPatientGEN);
-            this.panel15.Location = new System.Drawing.Point(406, 183);
+            this.panel15.Location = new System.Drawing.Point(406, 185);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(114, 32);
+            this.panel15.Size = new System.Drawing.Size(114, 40);
             this.panel15.TabIndex = 136;
             // 
             // addNewPatientGEN
             // 
-            this.addNewPatientGEN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.addNewPatientGEN.BackColor = System.Drawing.Color.White;
             this.addNewPatientGEN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.addNewPatientGEN.Font = new System.Drawing.Font("Rubik", 8F);
-            this.addNewPatientGEN.ForeColor = System.Drawing.Color.White;
+            this.addNewPatientGEN.Font = new System.Drawing.Font("Rubik", 12F);
+            this.addNewPatientGEN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.addNewPatientGEN.Location = new System.Drawing.Point(10, 10);
             this.addNewPatientGEN.Margin = new System.Windows.Forms.Padding(10);
             this.addNewPatientGEN.Name = "addNewPatientGEN";
-            this.addNewPatientGEN.Size = new System.Drawing.Size(94, 13);
+            this.addNewPatientGEN.Size = new System.Drawing.Size(94, 19);
             this.addNewPatientGEN.TabIndex = 2;
             this.addNewPatientGEN.Text = "Gender";
             this.addNewPatientGEN.Enter += new System.EventHandler(this.addNewPatientGEN_Enter);
@@ -816,30 +776,31 @@ namespace SJC
             // 
             // addNewPatientDT
             // 
-            this.addNewPatientDT.Location = new System.Drawing.Point(535, 189);
+            this.addNewPatientDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addNewPatientDT.Location = new System.Drawing.Point(535, 193);
             this.addNewPatientDT.Name = "addNewPatientDT";
-            this.addNewPatientDT.Size = new System.Drawing.Size(230, 20);
+            this.addNewPatientDT.Size = new System.Drawing.Size(281, 26);
             this.addNewPatientDT.TabIndex = 135;
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel14.BackColor = System.Drawing.Color.White;
             this.panel14.Controls.Add(this.addNewPatientLN);
-            this.panel14.Location = new System.Drawing.Point(406, 139);
+            this.panel14.Location = new System.Drawing.Point(457, 136);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(359, 32);
+            this.panel14.Size = new System.Drawing.Size(359, 40);
             this.panel14.TabIndex = 134;
             // 
             // addNewPatientLN
             // 
-            this.addNewPatientLN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.addNewPatientLN.BackColor = System.Drawing.Color.White;
             this.addNewPatientLN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.addNewPatientLN.Font = new System.Drawing.Font("Rubik", 8F);
-            this.addNewPatientLN.ForeColor = System.Drawing.Color.White;
+            this.addNewPatientLN.Font = new System.Drawing.Font("Rubik", 12F);
+            this.addNewPatientLN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.addNewPatientLN.Location = new System.Drawing.Point(10, 10);
             this.addNewPatientLN.Margin = new System.Windows.Forms.Padding(10);
             this.addNewPatientLN.Name = "addNewPatientLN";
-            this.addNewPatientLN.Size = new System.Drawing.Size(337, 13);
+            this.addNewPatientLN.Size = new System.Drawing.Size(337, 19);
             this.addNewPatientLN.TabIndex = 2;
             this.addNewPatientLN.Text = "Last Name";
             this.addNewPatientLN.Enter += new System.EventHandler(this.addNewPatientLN_Enter);
@@ -847,23 +808,23 @@ namespace SJC
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.Controls.Add(this.addNewPatientFN);
-            this.panel13.Location = new System.Drawing.Point(43, 139);
+            this.panel13.Location = new System.Drawing.Point(43, 136);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(347, 32);
+            this.panel13.Size = new System.Drawing.Size(396, 40);
             this.panel13.TabIndex = 133;
             // 
             // addNewPatientFN
             // 
-            this.addNewPatientFN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.addNewPatientFN.BackColor = System.Drawing.Color.White;
             this.addNewPatientFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.addNewPatientFN.Font = new System.Drawing.Font("Rubik", 8F);
-            this.addNewPatientFN.ForeColor = System.Drawing.Color.White;
+            this.addNewPatientFN.Font = new System.Drawing.Font("Rubik", 12F);
+            this.addNewPatientFN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
             this.addNewPatientFN.Location = new System.Drawing.Point(10, 10);
             this.addNewPatientFN.Margin = new System.Windows.Forms.Padding(10);
             this.addNewPatientFN.Name = "addNewPatientFN";
-            this.addNewPatientFN.Size = new System.Drawing.Size(327, 13);
+            this.addNewPatientFN.Size = new System.Drawing.Size(327, 19);
             this.addNewPatientFN.TabIndex = 2;
             this.addNewPatientFN.Text = "First Name";
             this.addNewPatientFN.Enter += new System.EventHandler(this.addNewPatientFN_Enter);
@@ -871,23 +832,23 @@ namespace SJC
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.addNewPatientADD);
-            this.panel12.Location = new System.Drawing.Point(43, 183);
+            this.panel12.Location = new System.Drawing.Point(43, 182);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(347, 32);
+            this.panel12.Size = new System.Drawing.Size(347, 43);
             this.panel12.TabIndex = 132;
             // 
             // addNewPatientADD
             // 
-            this.addNewPatientADD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
+            this.addNewPatientADD.BackColor = System.Drawing.Color.White;
             this.addNewPatientADD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.addNewPatientADD.Font = new System.Drawing.Font("Rubik", 8F);
-            this.addNewPatientADD.ForeColor = System.Drawing.Color.White;
-            this.addNewPatientADD.Location = new System.Drawing.Point(10, 10);
+            this.addNewPatientADD.Font = new System.Drawing.Font("Rubik", 12F);
+            this.addNewPatientADD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.addNewPatientADD.Location = new System.Drawing.Point(10, 11);
             this.addNewPatientADD.Margin = new System.Windows.Forms.Padding(10);
             this.addNewPatientADD.Name = "addNewPatientADD";
-            this.addNewPatientADD.Size = new System.Drawing.Size(327, 13);
+            this.addNewPatientADD.Size = new System.Drawing.Size(327, 19);
             this.addNewPatientADD.TabIndex = 2;
             this.addNewPatientADD.Text = "Address";
             this.addNewPatientADD.Enter += new System.EventHandler(this.addNewPatientADD_Enter);
@@ -896,11 +857,11 @@ namespace SJC
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rubik", 24F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(43, 82);
+            this.label2.Font = new System.Drawing.Font("Rubik SemiBold", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label2.Location = new System.Drawing.Point(36, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(337, 40);
+            this.label2.Size = new System.Drawing.Size(474, 54);
             this.label2.TabIndex = 131;
             this.label2.Text = "Register new  Patient";
             // 
@@ -1016,41 +977,144 @@ namespace SJC
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::SJC.Properties.Resources.Icon_awesome_home1;
-            this.pictureBox4.Location = new System.Drawing.Point(41, 65);
+            this.pictureBox4.Image = global::SJC.Properties.Resources.Icon_awesome_home4;
+            this.pictureBox4.Location = new System.Drawing.Point(36, 65);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox4.Size = new System.Drawing.Size(57, 55);
             this.pictureBox4.TabIndex = 70;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::SJC.Properties.Resources.Icon_feather_settings1;
-            this.pictureBox6.Location = new System.Drawing.Point(41, 104);
+            this.pictureBox6.Image = global::SJC.Properties.Resources.Icon_ionic_ios_settings2;
+            this.pictureBox6.Location = new System.Drawing.Point(36, 126);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox6.Size = new System.Drawing.Size(57, 56);
             this.pictureBox6.TabIndex = 69;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Rubik", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 40);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "SJC";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Rubik SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label3.Location = new System.Drawing.Point(29, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(227, 26);
+            this.label3.TabIndex = 123;
+            this.label3.Text = "Account Information";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Rubik", 12F);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Rubik", 12F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(25, 109);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Rubik", 12F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridView1.Size = new System.Drawing.Size(1415, 671);
+            this.dataGridView1.TabIndex = 104;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(41, 414);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(244, 28);
+            this.comboBox1.TabIndex = 139;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Rubik", 12F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(143)))), ((int)(((byte)(215)))));
+            this.label4.Location = new System.Drawing.Point(39, 390);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 20);
+            this.label4.TabIndex = 140;
+            this.label4.Text = "Doctor";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SJC.Properties.Resources.Icon_feather_minimize_2;
+            this.pictureBox1.Location = new System.Drawing.Point(1522, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox1.TabIndex = 73;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SJC.Properties.Resources.Icon_ionic_md_close;
+            this.pictureBox2.Location = new System.Drawing.Point(1556, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox2.TabIndex = 72;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Assistant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1162, 584);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.dashbboardTopName);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Assistant";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Assistant";
             this.Load += new System.EventHandler(this.Assistant_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -1078,7 +1142,6 @@ namespace SJC
             this.panel38.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.panel16.ResumeLayout(false);
@@ -1093,15 +1156,15 @@ namespace SJC
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label dashbboardTopName;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label pres5sched;
@@ -1157,7 +1220,6 @@ namespace SJC
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel46;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.DateTimePicker adt2;
@@ -1177,5 +1239,12 @@ namespace SJC
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TextBox addNewPatientADD;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

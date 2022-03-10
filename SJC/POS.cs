@@ -59,6 +59,14 @@ namespace SJC
         private DataSet DSOrders = new DataSet();
         private DataTable DTOrders = new DataTable();
 
+        private DataSet DSMOrders = new DataSet();
+        private DataTable DTMOrders = new DataTable();
+
+        private DataSet DSVMOrders = new DataSet();
+        private DataTable DTVMOrders = new DataTable();
+
+
+
         // Add New Session Meds
         // public static string selectedMedID;
         private DataSet DSAddMeds = new DataSet();
@@ -98,13 +106,19 @@ namespace SJC
         private static string prdName;
         private static string prdPrice;
 
-     
 
-        List<KeyValuePair<string, int>> ShoppingCart = new List<KeyValuePair<string, int>>();
+        public static int OrderTotal;
+        public static string OrderNumber;
+
+        private static string SelectedORDERM;
+
+        public static List<KeyValuePair<string, int>> ShoppingCart = new List<KeyValuePair<string, int>>();
 
         private void medsInventoryDgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedMedID = medsInventoryDgv.SelectedRows[0].Cells[0].Value.ToString();
+
+          
         }
 
         private void GenerateSessionID(int length = 4)
@@ -125,7 +139,7 @@ namespace SJC
             var random = new Random();
             var randomString = new string(Enumerable.Repeat(chars, length)
                                                     .Select(s => s[random.Next(s.Length)]).ToArray());
-            GeneratedItemPOSID = "Session-" + randomString;
+            GeneratedItemPOSID = "Item_Order-" + randomString;
 
         }
 
@@ -766,6 +780,8 @@ namespace SJC
         {
 
             addToSession();
+
+
         }
 
 
@@ -797,7 +813,7 @@ namespace SJC
             {
                 addToCurrentSessionPOS(prdName, int.Parse(prdPrice));
 
-
+                
 
                 ShoppingCart.Add(new KeyValuePair<string, int>(prdCode.Text, int.Parse(prdQuan.Text)));
 
@@ -817,6 +833,8 @@ namespace SJC
         {
 
             CurrentSessionTotal = CurrentSessionTotal + (int.Parse(prdPrice) * int.Parse(prdQuan.Text));
+
+            OrderTotal = CurrentSessionTotal;
 
             totalPOS.Text = "Total : " + CurrentSessionTotal.ToString();
 
@@ -853,35 +871,39 @@ namespace SJC
         private void button1_Click(object sender, EventArgs e)
         {
 
+           
+            OrderNumber = GeneratedSessionPOSID;
 
-         
 
-            string txtQuery = "INSERT into Orders_Master (SJCOM_Session, SJCOM_Date, SJCOM_isArchive) values ('" + GeneratedSessionPOSID + "', '" + DateTime.Now.ToShortDateString() + "', '" + 0 + "')";
+            OrderMaster ord = new OrderMaster();
+            ord.ShowDialog();
+
+       //     string txtQuery = "INSERT into Orders_Master (SJCOM_Session, SJCOM_Date, SJCOM_isArchive) values ('" + GeneratedSessionPOSID + "', '" + DateTime.Now.ToShortDateString() + "', '" + 0 + "')";
 
             prdName = "";
             prdPrice = "";
             GenerateItemMedID();
             GenerateSessionID();
             CurrentSessionTotal = 0;
-            totalPOS.Text = "0";
+            totalPOS.Text = "Total";
             SessionIDDash.Text = GeneratedSessionPOSID;
             itemSessiondash.Text = GeneratedItemPOSID;
 
-            executeQuery(txtQuery);
+         //   executeQuery(txtQuery);
             loadCurrentSessiionOrderPOS();
 
 
-            //foreach (var val in ShoppingCart)
-            //{
-            //    totalPOS.Text = val.Key;
-            //}
+            prdCode.Text = "Product Code";
+            prdQuan.Text = "Quantity";
 
-            getItemData();
+           // getItemData();
         }
 
 
-        private void getItemData()
+        public void getItemData()
         {
+
+            
 
             int stockNow = 0;
 
@@ -925,9 +947,81 @@ namespace SJC
 
                 executeQuery(txtQuery);
 
-          
+         
+        }
+
+        private void panel41_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel38_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 6;
+
+            loadOrders();
+        }
+
+        private void loadOrders()
+        {
+            setConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+
+            // Employee
+            string CommandText = "SELECT SJCOM_Session AS SESSION, SJCOM_Date AS DATE, SJCOM_Cash AS CASH, SJCOM_MOD AS MOD, SJCOM_Change AS CHANGE , SJCOM_isDiscounted AS DISCOUNTED  FROM Orders_Master WHERE  SJCOM_isArchive = 0";
+            sql_adptr = new SQLiteDataAdapter(CommandText, sql_con);
+            DSMOrders.Reset();
+            sql_adptr.Fill(DSMOrders);
+            DTMOrders = DSMOrders.Tables[0];
+            dataGridView2.DataSource = DTMOrders;
+
+            sql_con.Close();
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectedORDERM = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (SelectedORDERM == null )
+            {
+                MessageBox.Show("Please select a session first");
+            } else
+            {
+                tabControl1.SelectedIndex = 7;
+                loadOrderSessionItems();
+            }
+        }
 
 
+        private void loadOrderSessionItems()
+        {
+            sessioNView.Text = SelectedORDERM;
+
+
+            setConnection();
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+
+            // Employee
+            string CommandText = "SELECT SJCO_ProductName AS NAME, SJCO_Quantity AS QUANTITY, SJCO_Price AS PRICE, SJCO_OverAll AS OVERALL  FROM Orders WHERE  SJCO_SessionID = '"+ SelectedORDERM  + "' AND SJCO_isArchived = 0";
+            sql_adptr = new SQLiteDataAdapter(CommandText, sql_con);
+            DSVMOrders.Reset();
+            sql_adptr.Fill(DSVMOrders);
+            DTVMOrders = DSVMOrders.Tables[0];
+            dataGridView3.DataSource = DTVMOrders;
+
+            sql_con.Close();
+
+            
         }
     }
 }

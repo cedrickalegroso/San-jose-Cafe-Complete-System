@@ -124,9 +124,6 @@
   <data name="Icon awesome-diagnoses1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon awesome-diagnoses1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon awesome-box" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon awesome-box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Icon awesome-diagnoses2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon awesome-diagnoses2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,6 +163,9 @@
   <data name="Icon awesome-home3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon awesome-home3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon feather-settings1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon feather-settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon awesome-boxes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon awesome-boxes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,8 +175,8 @@
   <data name="Icon awesome-box1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon awesome-box1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon open-account-logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon open-account-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon awesome-diagnoses4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon awesome-diagnoses4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon awesome-home2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon awesome-home2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,17 +190,20 @@
   <data name="Icon awesome-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon awesome-home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon awesome-diagnoses4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon awesome-diagnoses4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon awesome-box" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon awesome-box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon ionic-ios-settings2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon ionic-ios-settings2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon feather-settings1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon feather-settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon open-account-logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon open-account-logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon ionic-ios-settings1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon ionic-ios-settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon ionic-md-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon ionic-md-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon ionic-ios-medical3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon ionic-ios-medical3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +214,7 @@
   <data name="Icon feather-minimize-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon feather-minimize-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon ionic-md-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon ionic-md-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon awesome-receipt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon awesome-receipt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

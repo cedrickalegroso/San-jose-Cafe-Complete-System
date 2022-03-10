@@ -233,6 +233,16 @@ namespace SJC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_awesome_receipt {
+            get {
+                object obj = ResourceManager.GetObject("Icon awesome-receipt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_feather_minimize_2 {
             get {
                 object obj = ResourceManager.GetObject("Icon feather-minimize-2", resourceCulture);
