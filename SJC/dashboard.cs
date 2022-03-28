@@ -842,7 +842,9 @@ namespace SJC
             if (patientSelectedID != null)
             {
                 dashboardTab.SelectedIndex = 6;
-                string txtQuery = "Select p.SJCP_ID, p.SJCP_LastName, p.SJCP_FirstName, p.SJCP_Address, p.SJCP_Gender,  p.SJCP_Birthday, p.SJCP_isArchive, sp.SJCSPR_ID from Patient AS p INNER JOIN Staff_Patient AS sp ON p.SJCP_ID = sp.SJCSPR_Patient AND sp.SJCSPR_Staff = '" + authID + "' AND p.SJCP_ID = '" + patientSelectedID + "'";
+
+              //  SELECT * FROM Patient INNER JOIN Staff_Patient AS sp WHERE sp.SJCSPR_Patient = '" + patientSelectedID + "'" AND sp.SJCSPR_Staff = 2 ORDER BY SJCP_ID DESC LIMIT 1
+                string txtQuery = "Select p.SJCP_ID, p.SJCP_LastName, p.SJCP_FirstName, p.SJCP_Address, p.SJCP_Gender,  p.SJCP_Birthday, p.SJCP_isArchive, sp.SJCSPR_ID, sp.isActive from Patient AS p INNER JOIN Staff_Patient AS sp ON p.SJCP_ID = sp.SJCSPR_Patient AND sp.SJCSPR_Staff = '" + authID + "' AND p.SJCP_ID = '" + patientSelectedID + "'";
 
                 setConnection();
                 sql_con.Open();
@@ -863,7 +865,7 @@ namespace SJC
                     historyPatientGenderVal = sql_dbr.GetString(4);
                     historyPatientBdayVal = sql_dbr.GetString(5);
                     historyPatientisArchiveVal = sql_dbr.GetInt32(6);
-                    historyPatientStaffPatient = sql_dbr.GetInt32(7);
+                    historyPatientStaffPatient = sql_dbr.GetInt32(8);
 
                     count = count + 1;
 
@@ -920,7 +922,7 @@ namespace SJC
 
         private void button11_Click(object sender, EventArgs e)
         {
-            string txtQuery = "update Patient set SJCP_isArchive = 1 WHERE SJCP_ID = '" + patientSelectedID + "' ";
+            string txtQuery = "update Staff_Patient set isActive = 0 WHERE SJCSPR_Patient = '" + patientSelectedID + "' AND SJCSPR_Staff = '" + authID + "' ";
             patientsIsArchived.Checked = false;
             dashboardTab.SelectedIndex = 3;
             executeQuery(txtQuery);
@@ -932,7 +934,7 @@ namespace SJC
 
         private void button10_Click(object sender, EventArgs e)
         {
-            string txtQuery = "update Patient set SJCP_isArchive = 0 WHERE SJCP_ID = '" + patientSelectedID + "' ";
+            string txtQuery = "update Staff_Patient set isActive = 1 WHERE SJCSPR_Patient = '" + patientSelectedID + "' AND SJCSPR_Staff = '" + authID + "' ";
             patientsIsArchived.Checked = false;
             dashboardTab.SelectedIndex = 3;
             executeQuery(txtQuery);
@@ -978,13 +980,13 @@ namespace SJC
 
                 if (editPatientisArchiveVal == 1)
                 {
-                    button10.Visible = true;
-                    button11.Visible = false;
+                    button10.Visible = false;
+                    button11.Visible = true;
                 }
                 else
                 {
-                    button10.Visible = false;
-                    button11.Visible = true;
+                    button10.Visible = true;
+                    button11.Visible = false;
                 }
 
 
@@ -1090,7 +1092,7 @@ namespace SJC
             sql_cmd = sql_con.CreateCommand();
 
      
-            string CommandText = "Select p.SJCP_ID AS ID, p.SJCP_LastName AS LastName, p.SJCP_FirstName AS FirstName, p.SJCP_Address AS Address,  p.SJCP_Birthday AS Birthday, sp.SJCSPR_ID AS StaffPatientID from Patient AS p INNER JOIN Staff_Patient AS sp ON p.SJCP_ID = sp.SJCSPR_Patient AND sp.SJCSPR_Staff = '" + authID + "' AND p.SJCP_isArchive = 0";
+            string CommandText = "Select p.SJCP_ID AS ID, p.SJCP_LastName AS LastName, p.SJCP_FirstName AS FirstName, p.SJCP_Address AS Address,  p.SJCP_Birthday AS Birthday, sp.SJCSPR_ID AS StaffPatientID from Patient AS p INNER JOIN Staff_Patient AS sp ON p.SJCP_ID = sp.SJCSPR_Patient AND sp.SJCSPR_Staff = '" + authID + "' AND sp.isActive = 1";
             sql_adptr = new SQLiteDataAdapter(CommandText, sql_con);
             DSPATIENT.Reset();
             sql_adptr.Fill(DSPATIENT);
@@ -1485,17 +1487,17 @@ namespace SJC
                 if (count == 0)
                 {
                     appointMent1IDVal = sql_dbr.GetInt32(0);
-                    p1ID = sql_dbr.GetInt32(5);
+                    p1ID = sql_dbr.GetInt32(6);
                     p1Sched = sql_dbr.GetString(2);
                 } if (count == 1)
                 {
                     appointMent2IDVal = sql_dbr.GetInt32(0);
-                    p2ID = sql_dbr.GetInt32(5);
+                    p2ID = sql_dbr.GetInt32(6);
                     p2Sched = sql_dbr.GetString(2);
                 } if (count == 2)
                 {
                     appointMent3IDVal = sql_dbr.GetInt32(0);
-                    p3ID = sql_dbr.GetInt32(5);
+                    p3ID = sql_dbr.GetInt32(6);
                     p3Sched = sql_dbr.GetString(2);
                 }
                
@@ -1850,14 +1852,14 @@ namespace SJC
         {
             diag1des.Text = "";
             shorteneddes1 = "";
-            if (word.Length > 29)
+            if (word.Length > 39)
 
             {
 
-                for (int i = 0; i < 30; i++)
+                for (int i = 0; i < 40; i++)
                 {
 
-                    if (i < 29)
+                    if (i < 39)
                     {
                         shorteneddes1 += word[i].ToString();
                     }
@@ -2612,6 +2614,16 @@ namespace SJC
         {
             radioButton1.Checked = false;
             dashboardTab.SelectedIndex = 0;
+            getAuthData();
+            setDashNames();
+            getpatientsCount();
+            getPatientOverall();
+            getAppointmentsCount();
+            getAppointmentList();
+            initGetPatient();
+            getAppointmentsDoneCount();
+            patientCardOnOff();
+            GenerateSessionID();
         }
 
       
@@ -2669,7 +2681,7 @@ namespace SJC
         private void getPatientOverall()
         {
 
-            string txtQuery = "SELECT * FROM Staff_Patient WHERE   SJCSPR_Staff = '" + authID + "' ";
+            string txtQuery = "SELECT * FROM Staff_Patient WHERE   SJCSPR_Staff = '" + authID + "'  ";
 
             setConnection();
             sql_con.Open();
